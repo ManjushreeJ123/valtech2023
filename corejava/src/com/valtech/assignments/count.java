@@ -1,7 +1,5 @@
 package com.valtech.assignments;
 
-
- 
 import java.io.BufferedReader;
 
 import java.io.FileReader;
@@ -75,9 +73,7 @@ String tag = matcher.group(1);
                 tagEndLine.put(tag, lineNumber);
 
             }
-
-
-        }
+       }
 
         reader.close();
 

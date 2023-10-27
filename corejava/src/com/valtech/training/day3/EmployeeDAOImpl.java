@@ -132,20 +132,20 @@ private Connection getConnection() throws SQLException {
 		dao.count();
 		System.out.println();
 	}
-
-	public int nextId(int id) throws SQLExpection{
-		Connection conn=getConnection();
-		PreparedStatement ps = conn.prepareStatement("SELECT MIN(ID) FROM EMPLOYEE WHERE ID > ?");
-		ps.setInt(1, id);
-		ResultSet rs = ps.executeQuery();
-		if(rs.next()) {
-			id=rs.getInt(1)
-			return id;
-		}
-		con.close();
-			
-		
-	}
+//
+//	public int nextId(int id) throws SQLExpection{
+//		Connection conn=getConnection();
+//		PreparedStatement ps = conn.prepareStatement("SELECT MIN(ID) FROM EMPLOYEE WHERE ID > ?");
+//		ps.setInt(1, id);
+//		ResultSet rs = ps.executeQuery();
+//		if(rs.next()) {
+//			id=rs.getInt(1);
+//			return id;
+//		}
+//		con.close();
+//			
+//		
+//	}
 	
 		public long count() throws SQLException {
 
