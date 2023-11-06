@@ -109,6 +109,7 @@ public static String hexToRgb(String hex) {
        int green = (colorValue >> 8) & 0xFF;
 
        int blue = colorValue & 0xFF;
+     //  System.out.println(hex + "hello");
 
        return "rgb(" + red + "," + green + "," + blue + ")";
 

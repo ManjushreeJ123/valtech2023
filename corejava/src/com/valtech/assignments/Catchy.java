@@ -19,6 +19,7 @@ public class Catchy {
 				mostCatchyNumber = entry.getKey();
 			}
 		}
+		System.out.println(mostCatchyNumber);
 		return mostCatchyNumber;
 	}
 
@@ -57,7 +58,7 @@ public class Catchy {
 	}
 
 	public static void main(String[] args) {
-		List<String> phoneNumbers = List.of("123321", "12121212", "999999999", "98765432");
+		List<String> phoneNumbers = List.of("11112222", "12121212", "999999999", "98765432");
 		String mostCatchyPhoneNumber = findMostCatchyNumber(phoneNumbers);
 		System.out.println("The most catchy phone number is: " + mostCatchyPhoneNumber);
 	}

@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class CommonWords {
 	public static void main(String[] args) {
 // Define a set of common words (verbs, adverbs, adjectives)
-		Set<String> commonWords = new HashSet<>(Arrays.asList("is", "are", "as", "if", "and", "the", "to", "of"));
+		Set<String> commonWords = new HashSet<>(Arrays.asList("is", "are", "as", "if", "and", "the", "to", "of","a"));
 		// Create a HashMap to store word counts
 		Map<String, Integer> wordCounts = new HashMap<>();
 		try {
