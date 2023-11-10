@@ -19,6 +19,8 @@ import com.valtech.training.hibernate.BankAccountId;
 import com.valtech.training.hibernate.ChequeTx;
 import com.valtech.training.hibernate.Customer;
 import com.valtech.training.hibernate.Employee;
+import com.valtech.training.hibernate.OrderSummary;
+import com.valtech.training.hibernate.OrderSummaryId;
 import com.valtech.training.hibernate.Registration;
 import com.valtech.training.hibernate.TellerTx;
 import com.valtech.training.hibernate.Tx;
@@ -37,16 +39,21 @@ public class HibernateClient {
 		
 		cfg.addAnnotatedClass(Account.class);
 		cfg.addAnnotatedClass(Registration.class).addAnnotatedClass(BankAccount.class);
+		cfg.addAnnotatedClass(OrderSummary.class);
 		
 		SessionFactory sesFac = cfg.buildSessionFactory();
 		Session ses = sesFac.openSession();
 		Transaction tx =ses.beginTransaction();
 		
-		ses.persist(new BankAccount(new BankAccountId("SB",1),30000));
+		ses.persist(new OrderSummary(1,2,3));
+		OrderSummary os = (OrderSummary) ses.load(OrderSummary.class,new OrderSummaryId(1,2));
+				System.out.println("Qty = "+os.getQuantity());
 		
-		BankAccountId id = new BankAccountId("SB",1);
-		BankAccount ba = (BankAccount)ses.load(BankAccount.class, id);
-		
+//		ses.persist(new BankAccount(new BankAccountId("SB",1),30000));
+//		
+//		BankAccountId id = new BankAccountId("SB",1);
+//		BankAccount ba = (BankAccount)ses.load(BankAccount.class, id);
+//		
 //		Customer cus = new Customer("Abc",23);
 //		ses.save(cus);
 //		Address add = new Address("JP Nagar","Blr",560078);

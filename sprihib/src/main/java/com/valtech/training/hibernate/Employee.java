@@ -36,6 +36,16 @@ public class Employee {
 	
 	//property right click source getters and setters
 	
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", dob=" + dob + ", salary=" + salary + ", gender=" + gender
+				+ ", active=" + active + ", version=" + version + ", getVersion()=" + getVersion() + ", getId()="
+				+ getId() + ", getName()=" + getName() + ", getDob()=" + getDob() + ", getSalary()=" + getSalary()
+				+ ", getGender()=" + getGender() + ", isActive()=" + isActive() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+
+
 	public int getVersion() {
 		return version;
 	}
