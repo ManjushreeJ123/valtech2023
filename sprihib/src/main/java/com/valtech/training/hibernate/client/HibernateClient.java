@@ -1,4 +1,4 @@
-package com.valtech.training.hibernate.client;
+	package com.valtech.training.hibernate.client;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

@@ -36,6 +36,12 @@ public class CustomersDAOImpl implements CustomersDAO {
 		
 			@Autowired
 			private DataSource datasource;
+//			private String inserQuery = "INSERT INTO CUSTOMERS(CID,NAME,PHONEno,EMAIL,ADD_ID) VALUES(?,?,?,?,?)";
+//			private String updateQuery = "UPDATE CUSTOMERS SET NAME=?,PHONENO=?,EMAIL=? WHERE CID=?";
+//			private String deleteQuery = "DELETE FROM CUSTOMERS WHERE CID=?";
+//			private String getByIDQuery = "SELECT *FROM CUSTOMERS WHERE CID=?";
+//			private String countQuery="SELECT COUNT(C_ID) FROM CUSTOMER";
+//			private String getAllCus="SELECT *FROM CUSTOMERS";
 		
 
 			@Override

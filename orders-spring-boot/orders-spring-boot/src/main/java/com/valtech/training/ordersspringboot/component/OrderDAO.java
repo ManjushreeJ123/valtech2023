@@ -10,7 +10,7 @@ public interface OrderDAO {
 	void createOrders(Order o);
 	long count();
 	
-	List<Order> getAllOrder(); 
+	//List<Order> getAllOrder(); 
 	Order getOrder(int order_id) ;
 	
 }

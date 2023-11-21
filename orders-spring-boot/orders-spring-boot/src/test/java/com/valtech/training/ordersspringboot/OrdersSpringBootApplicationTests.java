@@ -14,41 +14,52 @@ import com.valtech.training.ordersspringboot.component.OrderDAO;
 @SpringBootTest
 class OrdersSpringBootApplicationTests {
 
-//	@Test
-//	void contextLoads() {
-//	@Autowired
-//	private CustomersDAO customersDao;
-//	@Autowired
-//	private OrderDAO orderDao;
+	@Test
+	void contextLoads() {
+		
+	}
+	@Autowired
+	private CustomersDAO customersDao;
+	@Autowired
+	private OrderDAO orderDao;
 		
 		@Test
 		void testCustomersDAO() {
 //			//creation of customer
-//		Customers c = new Customers("Manjushree",725966734,"manjushreej@gmail.com","Bangalore");
-//		customersDao.createCustomers(c);
-//		assertEquals(1,customersDao.count());
+		Customers c = new Customers(1,"Manjushree",725966734,"manjushreej@gmail.com","Bangalore");
+		customersDao.createCustomers(c);
+		assertEquals(1,customersDao.count());
 }
 
-@Test
-void testOrderDAO() {
+//@Test
+//void testOrderDAO() {
 //	Order o = new Order();
-}
-	@Test
-	void testProductDAO() {
-
-
-	}
-	
-	@Test
-	void testCompanyDAO() {
-		
-	}
-@Test
-void testCustomerAddressDAO() {
-	
-}
-
+//}
+//	@Test
+//	void testProductDAO() {
 //
+//
+//	}
+//	
+//	@Test
+//	void testCompanyDAO() {
+//		
+//	}
+//@Test
+//void testCustomerAddressDAO() {
+//	
+//}
+//void testCustomers() {
+
+	
+//	Customers c =new Customers("Manjushree","7283926534","manjuj@gmail.com","Tumkur");
+//	customersDAO.saveCustomers(new Customers("obito","6456454545","rin@halimani"));
+	
+//	customerDAO.updateCustomer(new Customer("kohli","123654","kohli@ilove"), 3);
+//	assertEquals(3, customerDAO.countCustomer());
+	
+
+
 //@SpringBootTest
 //class InvoiceSpringBootApplicationTests {
 //
@@ -80,6 +91,7 @@ void testCustomerAddressDAO() {
 //		customersDao.deleteCustomers(2);
 //		assertEquals(0,customersDao.count());
 
+	
 	}
 //}
 

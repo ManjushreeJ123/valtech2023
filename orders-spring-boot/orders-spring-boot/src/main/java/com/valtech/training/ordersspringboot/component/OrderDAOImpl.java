@@ -9,9 +9,10 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import com.valtech.training.ordersspringboot.component.CustomersDAOImpl.CustomersRowMapper;
-
+@Component
 public class OrderDAOImpl implements OrderDAO{
 	public class OrderRowMapper implements RowMapper<Order>{
 
@@ -52,16 +53,17 @@ public class OrderDAOImpl implements OrderDAO{
 
 	@Override
 	public long count() {
-		String countQry = "Select count(cid) from Order";
+		String countQry = "Select count(cid) from Orders";
 		return new JdbcTemplate(datasource).queryForObject(countQry, Long.class);
 	
 	}
+	
 
-	@Override
-	public List<Order> getAllOrder() {
-		String selectAllQry = "SELECT CID,NAME,PHONENO,EMAIL,ADD_ID, FROM CUSTOMERS";
-		return new JdbcTemplate(datasource).query(selectAllQry, new OrderRowMapper());
-	}
+//	@Override
+//	public List<Order> getAllOrder() {
+//		String selectAllQry = "SELECT CID,NAME,PHONENO,EMAIL,ADD_ID, FROM CUSTOMERS";
+//		return new JdbcTemplate(datasource).query(selectAllQry, new OrderRowMapper());
+//	}
 
 	@Override
 	public Order getOrder(int order_id) {

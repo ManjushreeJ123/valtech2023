@@ -12,16 +12,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.valtech.training.firstspringboot.component.EmployeeDAO;
-import com.valtech.training.firstspringboot.component.HelloWorld;
 import com.valtech.training.firstspringboot.entity.Order;
 import com.valtech.training.firstspringboot.service.OrderService;
+//import com.valtech.training.invoicespringboot.component.HelloWorld;
 
 @SpringBootTest
 class FirstSpringBootApplicationTests {
 
 
-	@Autowired
-		private  HelloWorld helloWorld;
+//	@Autowired
+//		private HelloWo
 	@Autowired
 	private EmployeeDAO employeeDAO;
 	@Autowired
@@ -40,12 +40,12 @@ class FirstSpringBootApplicationTests {
 //		assertEquals(3,employeeDAO.count());
 	//assertEquals(3,employeeDAO.getAllEmployees().size());
 	}
-	 
-		@Test
-		void contextLoads() {
-			assertNotNull(helloWorld);
-			assertEquals("Hello Spring Boot", helloWorld.hello());
-		}
-	 
+//	 
+//		@Test
+//		void contextLoads() {
+//			assertNotNull(helloWorld);
+//			assertEquals("Hello Spring Boot", helloWorld.hello());
+//		}
+//	 
 
 }
